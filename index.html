@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dalay Diaz Disla | Accounting Student</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f7f8fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #cc0033;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            color: #cc0033;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #fff5f7, #f7f8fc);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            color: #cc0033;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            font-weight: normal;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 5px;
+            border-radius: 6px;
+            background-color: #cc0033;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #990026;
+        }
+
+        .button-outline {
+            background-color: transparent;
+            color: #cc0033;
+            border: 2px solid #cc0033;
+        }
+
+        .button-outline:hover {
+            background-color: #cc0033;
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 75px 10%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 34px;
+            color: #cc0033;
+            margin-bottom: 40px;
+        }
+
+        /* About */
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        .about p {
+            margin-bottom: 18px;
+        }
+
+        /* Education */
+        .education-box {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .education-box h3 {
+            color: #cc0033;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .education-box p {
+            margin: 6px 0;
+        }
+
+        /* Experience */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #cc0033;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .skill {
+            background-color: #fff0f3;
+            color: #cc0033;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        /* Career Goals */
+        .goals {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        /* Contact */
+        .contact {
+            background-color: #fff0f3;
+            text-align: center;
+        }
+
+        .contact p {
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #cc0033;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile */
+        @media (max-width: 650px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            section {
+                padding: 60px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Dalay Diaz Disla</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#goals">Goals</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Home -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Dalay Diaz Disla</h1>
+
+            <h2>Accounting Student | Rutgers University</h2>
+
+            <p>
+                Welcome to my portfolio! I am an Accounting major at Rutgers
+                Business School who is passionate about learning, growing,
+                and building a career in accounting.
+            </p>
+
+            <a href="#about" class="button">
+                About Me
+            </a>
+
+            <a href="#contact" class="button button-outline">
+                Let's Connect
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Me -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="about">
+
+            <p>
+                Hi! My name is Dalay Diaz Disla, and I am currently studying
+                Accounting at Rutgers Business School at Rutgers University–New Brunswick.
+            </p>
+
+            <p>
+                I chose accounting because I have always been interested in
+                understanding how money works and how financial decisions can
+                affect people and businesses. I also enjoy solving problems,
+                paying attention to details, and looking for answers when
+                something does not make sense.
+            </p>
+
+            <p>
+                As I continue through college, I want to gain more experience
+                and learn about the different career paths available in
+                accounting. I am especially interested in forensic accounting
+                because it combines accounting with investigation and
+                problem-solving.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="education-box">
+
+            <h3>Rutgers University–New Brunswick</h3>
+
+            <p><strong>Rutgers Business School</strong></p>
+
+            <p>Bachelor of Science in Accounting</p>
+
+            <p>Expected Graduation: May 2029</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Experience -->
+    <section id="experience">
+
+        <h2>Experience</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Rutgers Recreation Assistant</h3>
+
+                <p>
+                    Support daily recreation facility operations by checking
+                    IDs, monitoring equipment, assisting students, maintaining
+                    a clean and safe environment, and working with coworkers
+                    to address student and facility needs.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Election Day Poll Worker</h3>
+
+                <p>
+                    Assisted with Election Day operations by preparing polling
+                    booths, verifying voter eligibility, answering voter
+                    questions, and helping keep the polling location organized.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Rutgers EOF Program</h3>
+
+                <p>
+                    Participate in academic advising sessions, workshops, and
+                    professional development activities while using resources
+                    designed to support academic and career development.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Rutgers Move-In Volunteer</h3>
+
+                <p>
+                    Welcomed incoming students and their families, helped move
+                    belongings, directed traffic, and assisted students as they
+                    transitioned into their residence halls.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2>Skills</h2>
+
+        <div class="skills">
+
+            <span class="skill">Accounting</span>
+            <span class="skill">Microsoft Excel</span>
+            <span class="skill">Communication</span>
+            <span class="skill">Customer Service</span>
+            <span class="skill">Problem Solving</span>
+            <span class="skill">Teamwork</span>
+            <span class="skill">Time Management</span>
+            <span class="skill">Attention to Detail</span>
+            <span class="skill">Adaptability</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- Career Goals -->
+    <section id="goals">
+
+        <h2>Career Goals</h2>
+
+        <div class="goals">
+
+            <p>
+                My goal is to build a strong foundation in accounting and
+                gain real-world experience through internships, coursework,
+                and professional opportunities.
+            </p>
+
+            <br>
+
+            <p>
+                I am particularly interested in exploring forensic accounting
+                because I enjoy the combination of accounting, investigation,
+                attention to detail, and problem-solving. I hope to continue
+                developing my technical skills while learning more about the
+                different areas of the accounting profession.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2>Let's Connect</h2>
+
+        <p>
+            Interested in connecting? Feel free to reach out!
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            dd1386@scarletmail.rutgers.edu
+        </p>
+
+        <a
+            href="mailto:dd1386@scarletmail.rutgers.edu"
+            class="button"
+        >
+            Email Me
+        </a>
+
+        <a
+            href="https://www.linkedin.com/"
+            class="button button-outline"
+            target="_blank"
+        >
+            LinkedIn
+        </a>
+
+        <a
+            href="https://github.com/"
+            class="button button-outline"
+            target="_blank"
+        >
+            GitHub
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Dalay Diaz Disla | Rutgers Business School
+        </p>
+
+    </footer>
+
+</body>
+</html>
